@@ -1,0 +1,328 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap');
+
+    *{ 
+      margin: 0%;
+      padding: 0%;
+      font-family: 'Montserrat', sans-serif;
+    } 
+
+    
+
+    body{
+        background: 
+        url(background.JPG);
+        background-repeat: repeat;
+        width: 100%;
+        height: 200vh; 
+        font-family: 'Montserrat', sans-serif;
+    } 
+
+    .hed{
+      
+      background:linear-gradient(rgba(56, 135, 123, 0.504), rgba(11, 36, 93, 0.671));
+      display: grid;
+      grid-template-columns: 70% 12% 13% 5%;
+      position: fixed; 
+      width: 100%;
+      height: 14%;
+      color: white;
+      
+    }
+    .nomer{
+      position: fixed; 
+      top: 5%; 
+      right: 20%;
+    }
+    .img25{  
+      position: fixed; 
+      top: 4.5%; 
+      right: 10%;}
+    .logo{
+      position: fixed; 
+      top: 4%; 
+      left: 4%;
+     }
+
+    /* chtoby ne bylo viden chekbox */
+    #menu__tog { 
+      opacity: 0; 
+    } 
+    /*menuda polosalar tik bolyp kalmas ushin */
+    #menu__tog:checked + .menu__b > span { 
+      transform: rotate(45deg); 
+    } 
+    /*2polosa bolyp ketpes ushin*/ 
+    #menu__tog:checked + .menu__b > span::before { 
+      top: 0; 
+      transform: rotate(0deg); 
+    } 
+    #menu__tog:checked + .menu__b > span::after { 
+      top: 0; 
+      transform: rotate(90deg); 
+    } 
+    /*menu shygu ushin*/ 
+    #menu__tog:checked ~ .menu__bx { 
+      right: 0 !important; 
+    } 
+    .menu__b { 
+      position: fixed; 
+      top: 6.4%; 
+      right: 5%; 
+      width:3%; 
+      height: 6%; 
+      cursor: pointer; 
+      z-index: 1; 
+    } 
+    .menu__b > span, 
+    .menu__b > span::before,
+    .menu__b > span::after { 
+      display: block; 
+      position: absolute; 
+      width: 100%; 
+      height: 2px; 
+      background-color:#ffffff; 
+      transition-duration: .25s; 
+    } 
+    .menu__b > span::before { 
+      content: ''; 
+      top: -8px; 
+    } 
+    .menu__b > span::after { 
+      content: ''; 
+      top: 8px; 
+    } 
+    .menu__bx { 
+      display: block; 
+      position: fixed; 
+      top: 0; 
+      right: -100%; 
+      width: 300px; 
+      height: 100%; 
+      margin: 0; 
+      padding: 8% 8% 0% 2% ; 
+      list-style: none;
+      background:   
+        linear-gradient(rgba(56, 135, 123,0.8), rgba(9, 24, 59,0.8)); 
+      transition-duration: .25s; 
+    } 
+    .menu__itm { 
+      display: block; 
+      padding: 12px 24px; 
+      color: #ffffff; 
+      font-family: 'Roboto', sans-serif; 
+      font-size: 20px; 
+      font-weight: 600; 
+      text-decoration: none; 
+      transition-duration: .25s; 
+    } 
+    .menu__itm:hover { 
+      color: #1e574f; 
+    }
+    .icon{padding-bottom: 5%;}
+
+    .h1{
+      margin: 3% 0 3% 7%;
+      color: rgb(5, 5, 71);
+      font-size: 40px;
+      border-bottom: 2px solid #0a0653;
+      width: 25%;
+    }
+      
+    .row{
+        display: grid;
+        grid-template-columns: 25% 25% 25% 25%;
+        grid-template-rows: 33% 34% 33%;
+        margin-left: 3% ;
+    }
+
+    .objects{
+      background-color: #FFF;
+      width: 310px;
+      height: 700px;
+      margin: -10% 5% 20% -1%;
+      box-shadow: 8px 10px 10px rgb(24, 24, 79);
+    
+    }
+
+    .nazvanie{
+      display: flex;
+      justify-content: center;
+      margin-top: 10%;
+    }
+
+    .image{
+      display: flex;
+      justify-content: center;
+      margin-top: 5%;
+    }
+
+    .image:hover{
+        transform: scale(1.2);
+        transition: 1s;
+        overflow: hidden;
+    }
+
+    #image{
+      width: 90%;
+      height: 40%;
+      padding: 0% 5%;
+    }
+
+
+    
+
+    .open-button{
+        width: 90%; 
+        height: 5%; 
+        font-weight: 500;
+        border: 3px solid #0a0653; 
+        background: #ffffff; 
+        font-size: 14px; 
+        margin: 5% 2% 0 5%;
+        font-family: 'Montserrat', sans-serif;
+        cursor: pointer;
+    }
+
+    .open-button:hover{
+        background-color: #0a0653;
+        color: #FFFFFF;
+    }
+
+    .form{
+      display: none;
+      position: fixed;
+      bottom: 0;
+      right: 40px;
+      
+      /* z-index: 9; */
+    }
+    
+    .form-container {
+      max-width: 360px;
+      padding: 10px;
+      background-color: #FFFFFF;
+      border: 1px solid #0a0653; 
+      /* background: 
+		    linear-gradient(to top left, rgba(127, 212, 251, 0.8), rgba(48, 160, 212, 0.759)); */
+    }
+    
+    .form-container input[type=text], .form-container input[type=password] {
+      width: 90%;
+      padding: 15px;
+      margin: 5px 0 22px 0;
+      border: none;
+      border: 3px solid #0a0653; 
+      font-size: 18px;
+    }
+    
+    .button{
+      background-color: white;
+      border: 3px solid #0a0653;
+      font-size: 18px;
+      /* color: white; */
+      padding: 16px 20px;
+      cursor: pointer;
+      width: 100%;
+      margin-bottom:10px;
+      
+    }
+
+    .button:hover{
+      background-color: #0b083e;
+      color: #FFFFFF;
+  }
+
+  .formh2{
+    color: #040138;
+    font-size: 20px;
+    margin: 3% 2% 8% 2%;
+  }
+
+
+
+
+    #myImg {
+      font-weight: 500;
+      border: 3px solid #0a0653; 
+      background: #ffffff; 
+      transition: 0.3s;
+      width: 15%;
+      height: 3%;
+      margin: 0% 0% 0% 35%;
+      position: relative;
+      top: -100px;
+      font-size: 16px;
+      font-family: 'Montserrat', sans-serif;
+    }
+    
+    #myImg:hover{
+      background-color: #0a0653;
+      color: #FFFFFF;
+    }
+    
+    .ImgClass {
+      display: none; 
+      position: fixed; 
+      z-index: 1; 
+      padding-top: 150px; 
+      left: 0;
+      top: 0;
+      width: 100%; 
+      height: 100%;
+      background-color: rgb(0,0,0,0.8); 
+    }
+    
+    .ImgClass-content {
+      margin: auto;
+      display: block;
+      width: 80%;
+      /* max-width: 900px; */
+    }
+    
+    .ImgClass-content, #caption {  
+      animation-name: zoom;
+      animation-duration: 0.6s;
+    }
+    
+    @keyframes zoom {
+      from {transform:scale(0)} 
+      to {transform:scale(1)}
+    }
+    
+    .close {
+      position: absolute;
+      top: 15px;
+      right: 35px;
+      color: #f1f1f1;
+      font-size: 40px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+    
+    .close:hover,
+    .close:focus {
+      color: #bbb;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    footer{ 
+      background-color: #09183b; 
+      color:#ffffff; 
+      display: grid; 
+      grid-template-columns: 40% 60%;
+      padding: 3% 0%; 
+    } 
+    .roww{ 
+      display: grid; 
+      grid-template-rows: 33% 33% 33%; 
+  
+    } 
+    .address{ 
+      font-size:110%; 
+      display: grid; 
+      grid-template-columns: 25% 37% 37%; 
+    } 
+    .img{ 
+      padding: 5% 10%; 
+    }
